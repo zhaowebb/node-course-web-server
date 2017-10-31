@@ -59,4 +59,48 @@ app.get('/bad', (req, res) => {
 	});
 });
 
+app.get('/apiForYC', (req, res) => {
+	res.send(
+		{
+    "products" : [
+        {
+            "category": "General Hospital",
+            "item" : [
+                {
+                    "title" : "My Company Product",
+                    "location" : "Stylet, Tracheal Tube",
+                    "time" : "Since: 2017-01-18"
+                },
+                {
+                    "title" : "My Company Another Product",
+                    "location" : "Stylet, Tracheal Tube",
+                    "time" : "Since: 2017-01-19"
+                }
+            ]
+        },
+        {
+            "category": "Chemistry",
+            "item" : [
+                {
+                    "title" : "My Company Another Product",
+                    "location" : "Stylet, Tracheal Tube",
+                    "time" : "Since: 2017-02-18"
+                }
+            ]
+        },
+        {
+            "category": "Microbiology",
+            "item" : [
+                {
+                    "title" : "My Company Another Product",
+                    "location" : "Stylet, Tracheal Tube",
+                    "time" : "Since: 2017-03-01"
+                }
+            ]
+        }
+    ]
+
+});
+});
+
 app.listen(port);
